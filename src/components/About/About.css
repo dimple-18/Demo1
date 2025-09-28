@@ -1,0 +1,132 @@
+.about {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+}
+
+/* Hero Section */
+.about-hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #332671, #007bff);
+  color: white;
+}
+.about-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.about-hero p {
+  font-size: 1.2rem;
+}
+
+/* Content Section */
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 4rem 8%;
+}
+.about-text {
+  flex: 1;
+}
+.about-text h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #332671;
+}
+.about-text span {
+  color: #007bff;
+  font-weight: bold;
+}
+.about-text p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+.about-text .learn-btn {
+  background: #007bff;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.about-text .learn-btn:hover {
+  background: #0056b3;
+}
+.about-image {
+  flex: 1;
+}
+.about-image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Values Section */
+.about-values {
+  text-align: center;
+  padding: 4rem 8%;
+  background: #f7f7f7;
+}
+.about-values h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #332671;
+}
+.values-grid {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+.value-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  transition: transform 0.3s ease;
+}
+.value-card:hover {
+  transform: translateY(-8px);
+}
+.value-card h3 {
+  margin-bottom: 1rem;
+}
+
+/* Team Section */
+.about-team {
+  text-align: center;
+  padding: 4rem 8%;
+}
+.about-team h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #332671;
+}
+.team-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+.team-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s;
+}
+.team-card:hover {
+  transform: scale(1.05);
+}
+.team-card img {
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+.team-card h3 {
+  margin-bottom: 0.5rem;
+}
+.team-card p {
+  color: #555;
+}

@@ -4,6 +4,7 @@ import Hero from "./components/Hero/Hero"
 import Hero2 from "./components/Hero2/Hero2";
 import Benefits from "./components/Benefits/Benefits";
 import Benefitsbox from "./components/Benefitsbox/Benefitsbox";
+import About from "./components/About/About";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Hero2 />
       <Benefits />
       <Benefitsbox />
+      <About />
 
     </>
   );
