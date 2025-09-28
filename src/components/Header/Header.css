@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+.Header {
+  z-index: 1000; 
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  padding: 0.5rem 1.5rem;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+.Header .logo img {
+  height: 50px;   
+  width: auto;   
+}
+
+/* .Header logo {
+    width: 120px;
+    height: 40px;
+}
+*/
+
+.Header .logo {
+  max-width: 120px;
+  height: auto;
+  margin-left: 20px;
+}
+
+.Header nav{
+    margin: 0 1rem;
+    text-decoration: none; 
+    font-weight: bold;
+    justify-content: center ;
+}
+
+.Header li {
+    display: inline-block;
+    margin: 0 1rem;
+    list-style: none;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #343a40;
+    letter-spacing: 1px;
+    color: #332671;
+}
+
+.Header .dashboard {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #343a40;
+    text-transform: uppercase;
+}
+
+.Header .dashboard button {
+    background-color: #332671;
+    color: white;
+    border: none;
+    letter-spacing: 1px;
+    padding: 0.8rem 1rem;
+    margin-right: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.Header .dashboard button:hover {
+    background-color: #0056b3;
+}

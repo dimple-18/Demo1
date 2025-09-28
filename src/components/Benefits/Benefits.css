@@ -1,0 +1,24 @@
+.border1{
+    width: 100%;
+    border: 2px solid black;
+}
+
+.border-heading{
+    justify-content: center; /* horizontal */
+    align-items: center; /* vertical */
+    border: 2px solid red;
+}
+
+.border-heading h1{
+    margin-top: 40px;
+    font-size: 40px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.border-head-para{
+    justify-content: center; 
+    align-items: center;
+    text-align: center;
+    margin-top: 10px;
+}
