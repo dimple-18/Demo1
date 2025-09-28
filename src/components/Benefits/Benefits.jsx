@@ -1,17 +1,22 @@
-import React from 'react'
-import './Benefits.css'
+import React from "react";
+import "./Benefits.css";
 
 const Benefits = () => {
   return (
-    <div className='border1'>
-        <div className="border-heading">
-            <h1>3 Main Benefits Of Our Courses?</h1>
-            <div className="border-head-para">
-                <p>This is a Hidden Business Gem that helped our students to make their first 1 lakh rupees online!</p>
-            </div>
-        </div>
-    </div>
-  )
-}
+    <section className="benefits" aria-labelledby="benefits-heading">
+      <div className="benefits__container">
+        <header className="benefits__header">
+          <h2 id="benefits-heading">
+            3 Main Benefits of Our Courses
+          </h2>
+          <p className="benefits__sub">
+            A hidden business gem that has helped our students earn their first ₹1 Lakh online!
+          </p>
+          <div className="benefits__accent" aria-hidden="true"></div>
+        </header>
+      </div>
+    </section>
+  );
+};
 
-export default Benefits
+export default Benefits;

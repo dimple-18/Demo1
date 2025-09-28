@@ -1,24 +1,25 @@
-import Header from "./components/Header/Header";
-import Container from "./container/Container";
-import Hero from "./components/Hero/Hero"
-import Hero2 from "./components/Hero2/Hero2";
-import Benefits from "./components/Benefits/Benefits";
-import Benefitsbox from "./components/Benefitsbox/Benefitsbox";
-import About from "./components/About/About";
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Layout from "./Layout";
+import Home from "./Pages/Home";
+import About from "./Pages/About";
+import Contact from "./Pages/Contact";
 
-function App() {
+const NotFound = () => (
+  <main id="main" style={{ padding: "2rem" }}>
+    <h2>Page not found</h2>
+  </main>
+);
+
+export default function App() {
   return (
-    <>
-      <Header />
-      <Container /> 
-      <Hero />
-      <Hero2 />
-      <Benefits />
-      <Benefitsbox />
-      <About />
-
-    </>
+    <Routes>
+        <Route element={<Layout />}>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="*" element={<NotFound />} />
+        <Route path="/contact" element={<Contact />} />
+      </Route>
+    </Routes>
   );
 }
-
-export default App;

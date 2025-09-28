@@ -1,0 +1,146 @@
+/* Only EnrollBanner and its children can see these */
+.enrollBanner{
+  --brand:#332671;
+  --ink:#0f172a;
+  --muted:#5a6473;
+  --surface:#ffffff;
+  --card:#5656c4;
+  --line:#e7e9f1;
+  --radius:18px;
+  --shadow:0 16px 40px rgba(15,23,42,.18);
+  --pad:clamp(16px,3.5vw,32px);
+  --maxw:1100px;
+}
+
+
+/* Section background with soft pastel sheen */
+.enrollBanner{
+  position: relative;
+  padding: clamp(28px, 6vw, 64px) var(--pad);
+  background:
+    radial-gradient(100% 60% at 10% -20%, #fff2f4 0%, transparent 60%),
+    radial-gradient(90% 60% at 90% 0%, #edf5ff 0%, transparent 60%),
+    radial-gradient(70% 50% at 50% 100%, #fff0ff 0%, transparent 60%),
+    #fff;
+}
+
+.enrollBanner__container{
+  max-width: var(--maxw);
+  margin: 0 auto;
+}
+
+/* Headline card */
+.enrollBanner__card{
+  background: var(--card);
+  color:#fff;
+  border-radius: 22px;
+  padding: clamp(18px, 3.5vw, 28px);
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(255,255,255,.06);
+}
+
+.enrollBanner__title{
+  margin: 0 0 .6rem;
+  display: grid;
+  gap: 6px;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: .2px;
+}
+
+.titleLine{
+  font-size: clamp(1.35rem, 1.1vw + 1.1rem, 2.1rem);
+  display: block;
+}
+
+.quoteMark{
+  color: #9aa3ff;
+  font-size: clamp(2rem, 2.2vw + 1.5rem, 3rem);
+  line-height: 0.8;
+}
+.quoteMark--end{ justify-self: end; transform: translateY(-6px); }
+
+.enrollBanner__sub{
+  margin: 0;
+  color: #e8e9ff;
+  opacity: .95;
+  font-size: clamp(.98rem, .6vw + .9rem, 1.12rem);
+  text-align: center;
+}
+.enrollBanner__sub .emoji{ margin-left: 4px; }
+
+/* CTA region */
+.enrollBanner__ctaWrap{
+  margin-top: clamp(14px, 3vw, 24px);
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+/* Big gradient CTA */
+.ctaBtn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: min(960px, 100%);
+  padding: clamp(14px, 2.8vw, 22px) clamp(16px, 3.5vw, 28px);
+  border-radius: 14px;
+  color:#fff;
+  font-weight: 800;
+  letter-spacing: .3px;
+  font-size: clamp(1.05rem, 1vw + 1rem, 1.6rem);
+  text-decoration: none;
+  background: linear-gradient(90deg, #ff7a7a, #ff6db8 45%, #ff6ed1 70%);
+  box-shadow: 0 18px 40px rgba(255, 110, 150, .28);
+  border: 1px solid rgba(255, 255, 255, .7);
+  transition: transform .15s ease, filter .2s ease, box-shadow .2s ease;
+}
+.ctaBtn:hover,
+.ctaBtn:focus-visible{
+  transform: translateY(-1px);
+  filter: saturate(105%);
+  outline: none;
+}
+.chevs{ transform: translateX(0); transition: transform .18s ease; }
+.ctaBtn:hover .chevs,
+.ctaBtn:focus-visible .chevs{ transform: translateX(3px); }
+
+/* Tooltip centered above button */
+.ctaTooltip{
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translate(-50%, -10px);
+  white-space: nowrap;
+  background: #ff7a7a;
+  color:#fff;
+  border: 1px solid #2a2f3a;
+  font-size: .95rem;
+  border-radius: 10px;
+  padding: 8px 12px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .2s ease, transform .2s ease;
+  box-shadow: 0 10px 24px rgba(0,0,0,.18);
+}
+.ctaTooltip__caret{
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 12px; height: 12px;
+  background: #a6aebd;
+  border-left: 1px solid #2a2f3a;
+  border-bottom: 1px solid #2a2f3a;
+  transform: translate(-50%, -6px) rotate(45deg);
+  border-radius: 2px;
+}
+.ctaTooltip.is-visible{
+  opacity: 1;
+  transform: translate(-50%, -14px);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce){
+  .ctaBtn, .chevs, .ctaTooltip{ transition: none; }
+}

@@ -1,22 +1,8 @@
-import React from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Home from '../components/Home/Home'
+// src/container/Container.jsx
+import React from 'react';
 
-const InnerRoute = () => {
-    return(
-        <>
-            <Routes>
-                <Route path='/' element={<Home />}/>
-            </Routes>
-        </>
-    )
-}
-const Container = () => {
-  return (
-   <Router>
-        <InnerRoute />
-   </Router>
-  )
-}
+const Container = ({ children }) => {
+  return <div className="container">{children}</div>;
+};
 
-export default Container
+export default Container;

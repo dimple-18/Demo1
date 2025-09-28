@@ -1,0 +1,145 @@
+/* Scoped variables (won't bleed into the site) */
+.siteFooter{
+  --sf-brand:#332671;
+  --sf-ink:#0f172a;
+  --sf-muted:#5b6574;
+  --sf-line:#e6e8f1;
+  --sf-bg:#0c0f17;
+  --sf-card:#0f1420;
+  --sf-light:#ffffff;
+  --sf-radius:16px;
+  --sf-shadow:0 20px 60px rgba(0,0,0,.25);
+
+  color: var(--sf-light);
+  background:
+    radial-gradient(80% 60% at 10% -10%, rgba(102,94,182,.18) 0%, transparent 60%),
+    radial-gradient(80% 60% at 90% 0%, rgba(255,109,171,.12) 0%, transparent 60%),
+    var(--sf-bg);
+  padding-top: clamp(28px, 4vw, 48px);
+}
+
+.sf__container{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 clamp(16px, 3vw, 32px);
+}
+
+/* Top grid */
+.sf__grid{
+  display: grid;
+  grid-template-columns: 1.2fr .9fr .9fr 1.2fr;
+  gap: clamp(16px, 3vw, 28px);
+  align-items: start;
+  margin-bottom: clamp(18px, 3vw, 28px);
+}
+@media (max-width: 980px){ .sf__grid{ grid-template-columns: 1fr 1fr; } }
+@media (max-width: 640px){ .sf__grid{ grid-template-columns: 1fr; } }
+
+/* Brand */
+.sf__brand .sf__logo{
+  display: inline-flex; align-items: center; gap: 10px;
+  background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+  border: 1px solid rgba(255,255,255,.08);
+  padding: 8px 10px; border-radius: 12px;
+  box-shadow: var(--sf-shadow);
+}
+.sf__brand img{ width: 38px; height: 38px; object-fit: contain; }
+.sf__tagline{
+  margin: 10px 0 0;
+  color: #d8dcf0;
+  max-width: 36ch;
+  line-height: 1.6;
+}
+
+/* Social icons */
+.sf__social{ display: flex; gap: 10px; margin-top: 10px; }
+.sf__icon{
+  width: 22px; height: 22px; fill: #cbd2ff; opacity: .9;
+  transition: transform .15s ease, opacity .2s ease;
+}
+.sf__social a:hover .sf__icon{ transform: translateY(-2px); opacity: 1; }
+
+/* Columns */
+.sf__links h3, .sf__contact h3, .sf__news h3{
+  margin: 0 0 8px; font-weight: 800; letter-spacing: .2px; color: #eef1ff;
+}
+.sf__links ul, .sf__contact ul{ list-style: none; padding: 0; margin: 0; }
+
+.sf__links a{
+  color: #d8dcf0; text-decoration: none; display: inline-block; padding: 6px 0;
+}
+.sf__links a:hover{ color: #ffffff; }
+
+.sf__contact li{ color: #d8dcf0; padding: 6px 0; }
+.sf__contact a{ color: #ffffff; text-decoration: none; }
+.sf__contact a:hover{ text-decoration: underline; }
+
+/* Newsletter */
+.sf__muted{ color: #a9b0c5; margin: 0 0 8px; }
+.sf__form{
+  display: grid; grid-template-columns: 1fr auto; gap: 8px;
+  background: var(--sf-card);
+  border: 1px solid rgba(255,255,255,.08);
+  padding: 8px; border-radius: 12px;
+}
+.sf__form input{
+  background: transparent; border: none; outline: none; color: #fff;
+  padding: 10px 12px; font: inherit;
+}
+.sf__form input::placeholder{ color: #9aa2bb; }
+.sf__form button{
+  background: linear-gradient(90deg, #6a5acd, #ff6aa8);
+  border: 1px solid rgba(255,255,255,.5);
+  color: #fff; font-weight: 800; letter-spacing: .2px;
+  padding: 10px 14px; border-radius: 10px; cursor: pointer;
+  transition: transform .15s ease, filter .2s ease;
+}
+.sf__form button:hover{ transform: translateY(-1px); filter: brightness(1.05); }
+.sf__msg{ color: #b5c0ff; font-size: .95rem; margin-top: 6px; }
+
+/* Bottom bar */
+.sf__bottom{
+  border-top: 1px solid rgba(255,255,255,.08);
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 10px; padding: 12px 0 24px;
+}
+.sf__bottom p{ color: #b7bed6; margin: 0; font-size: .95rem; }
+.sf__bottom ul{ list-style: none; display: flex; gap: 14px; margin: 0; padding: 0; }
+.sf__bottom a{ color: #cbd2ff; text-decoration: none; font-size: .95rem; }
+.sf__bottom a:hover{ color: #fff; }
+
+/* Utilities */
+.sr-only{
+  position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden;
+  clip:rect(0,0,0,0); white-space:nowrap; border:0;
+}
+
+.footerLite{
+  padding-bottom: 40px; /* more height */
+}
+
+/* Brand block bigger */
+.fl__brand{
+  grid-template-columns: auto 1fr;
+  padding: 28px;
+  margin-bottom: 28px;
+}
+.fl__tag{ font-size: 1rem; line-height: 1.6; }
+
+/* Resources column */
+.fl__cols{ margin-bottom: 32px; }
+
+/* Partner bar */
+.fl__partners{
+  border-top: 1px solid var(--fl-line);
+  border-bottom: 1px solid var(--fl-line);
+  padding: 16px 0;
+  margin-bottom: 16px;
+  display:flex; justify-content:space-between; align-items:center;
+  flex-wrap: wrap; gap:12px;
+}
+.fl__partners p{ margin:0; font-weight:600; }
+.fl__partners ul{
+  list-style:none; display:flex; gap:16px; margin:0; padding:0;
+}
+.fl__partners li{ font-weight:600; color:#374151; }
